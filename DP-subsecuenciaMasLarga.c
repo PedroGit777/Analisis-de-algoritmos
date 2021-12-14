@@ -3,26 +3,21 @@
 
 using namespace std;
 
-int main(void){
-	char b[100][100];
+int main(){
+	char b[100][100], X[100], Y[100];
 	int c[101][101];
-	char X[100], Y[100];
-    int i, j;
-	int m, n;
+	int i,j,m, n;
 	
-	cout<<"\nIngrese la longitud de X: ";
-	cin>>m;
-	cout<<"Ingrese la longitud de Y: ";
-	
-	
-	cout<<"\nIngrese la cadena X: ";
+	cout<<"\na longitud de X y Y: ";
+	cin>>m>>n;
+	cout<<"Ingrese la cadena X: ";
 	for(i=1; i<=m; i++){
-		cin>>X[i];
+		scanf("%a",&X[i]);
 	}
 	
 	cout<<"\nIngrese la cadena Y: ";
 	for(j=1; j<=n; j++){
-		cin>>Y[j];
+		scanf("%a",&Y[j])
 	}
 	
 	for(i=1; i<=m; i++){
@@ -43,10 +38,6 @@ int main(void){
 			c[i][j]=c[i-1][j];
 			b[i][j]="↑";
 			}
-		else {
-			c[i][j]=c[i][j-1];
-			b[i][j]="←";
-			}
 		}
 	}
 	
@@ -56,10 +47,4 @@ int main(void){
 		}
 	}
 	
-	for(i=0; i<=m; i++){
-		for(j=0; j<=n; j++){
-		cout<< b[i][j]);
-		}
-      cin<<endl;
-	}
 }
